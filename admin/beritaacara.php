@@ -243,14 +243,16 @@ if (date('m') >= 7 and date('m') <= 12) {
 			<td width='20%'>Kepala Sekolah</td>
 			<td width='30%' style='border-bottom:thin solid #000000'><?= $setting['kepsek'] ?></td>
 			<td height='30' width='5%'></td>
-			<td height='30' width='35%'></td>
+			<td height='30' width='35%' rowspan="2" style='border-bottom:thin solid #000000'>
+				3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img src="../dist/img/ttd.png" width="105" />
+			</td>
 		</tr>
 		<tr>
 			<td width='10%'> </td>
 			<td width='20%'>NIP. </td>
 			<td width='30%' style='border-bottom:thin solid #000000'><?= $setting['nip'] ?></td>
 			<td height='30' width='5%'></td>
-			<td height='30' width='35%' style='border-bottom:thin solid #000000'> 3. </td>
 		</tr>
 	</table><br><br><br><br><br>
 	<div class="footer">
@@ -258,7 +260,7 @@ if (date('m') >= 7 and date('m') <= 12) {
 			<tr>
 				<td width="25px" style="border:1px solid black"></td>
 				<td width="5px">&nbsp;</td>
-				<td style="border:1px solid black;font-weight:bold;font-size:14px;text-align:center;">KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN</td>
+				<td style="border:1px solid black;font-weight:bold;font-size:14px;text-align:center;"><?= strtoupper($setting['nama_ujian']) . " " . $setting['sekolah'] ?></td>
 				<td width="5px">&nbsp;</td>
 				<td width="25px" style="border:1px solid black"></td>
 			</tr>

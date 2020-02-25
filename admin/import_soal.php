@@ -41,7 +41,7 @@ $cekmapel = mysqli_num_rows($mapelQ);
         </form>
     </div>
     <div class='col-md-6'>
-        <form id="formsoalword" action='<?=$homeurl?>/admin/pages/word_import/import/index.php/word_import'
+        <form id="formsoalword" action='<?=$homeurl?>/admin/import_word.php'
             method='post' enctype='multipart/form-data'>
             <div class='box box-solid'>
                 <div class='box-header with-border'>
@@ -67,36 +67,36 @@ $cekmapel = mysqli_num_rows($mapelQ);
                     <tr>
                         <td> <input type='hidden' name='id_lokal' value='<?=$homeurl?>'></td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td> <input type='hidden' name='cid' value='1'></td>
                     </tr>
                     <tr>
                         <td> <input type='hidden' name='lid' value='2'></td>
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <!-- <tr>
                         <td> <input type='hidden' name='question_split' value='/Soal:[0-9]+\)/'></td>
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <!-- <tr>
                         <td><input type='hidden' name='description_split' value='/FileQ:/'></td>
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <!-- <tr>
                         <td><input type='hidden' name='question_gambar' value='/Gambar:/'></td>
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <!-- <tr>
                         <td><input type='hidden' name='question_video' value='/Video:/'></td>
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <!-- <tr>
                         <td><input type='hidden' name='question_audio' value='/Audio:/'></td>
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <!-- <tr>
                         <td><input type='hidden' name='option_split' value='/[A-Z]:/'></td>
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <!-- <tr>
                         <td><input type='hidden' name='option_file' value='/FileO:/'></td>
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <!-- <tr>
                         <td><input type='hidden' name='correct_split' value='/Kunci:/'></td>
-                    </tr>
+                    </tr> -->
                     <div class='form-group'>
                         <label>Pilih File</label>
                         <input type='file' name='word_file' class='form-control' required='true' />

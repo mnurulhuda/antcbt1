@@ -1235,6 +1235,18 @@ $tglsekarang = time();
 				function hitung() {
 					setTimeout(hitung, 1000);
 					$('#countdown').html(jam + ':' + menit + ':' + detik);
+
+					var n_soal = $("#nomorsoal").val();
+					var jumsoal = $("#jumlahsoal").val();
+					if (n_soal == jumsoal) {
+						$(".timer-selesai").html(jam + ':' + (menit-15) + ':' + detik);
+
+						if ((menit == 15) && (detik == 0)) {
+							$(".done-btn").removeAttr("disabled");
+							$(".aaaaa").html('');
+						}
+					}
+
 					detik--;
 					if (detik < 0) {
 						detik = 59;

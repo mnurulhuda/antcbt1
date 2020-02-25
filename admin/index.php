@@ -1176,7 +1176,7 @@ $mapel = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM mata_pelajaran"))
 												</table>
 												<table border='0' width='95%' align='center'>
 													<tr height='30'>
-														<td height='30' width='5%'>1.</td>
+														<td height='30' width='5%'></td>
 														<td height='30' width='30%'>Kode Sekolah</td>
 														<td height='30' width='60%' style='border-bottom:thin solid #000000'><?= $setting['kode_sekolah'] ?></td>
 													</tr>
@@ -1300,7 +1300,7 @@ $mapel = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM mata_pelajaran"))
 														<tr>
 															<td width='25px' style='border:1px solid black'></td>
 															<td width='5px'>&nbsp;</td>
-															<td style='border:1px solid black;font-weight:bold;font-size:14px;text-align:center;'>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN</td>
+															<td style='border:1px solid black;font-weight:bold;font-size:14px;text-align:center;'><?= strtoupper($setting['nama_ujian']) . " " . $setting['sekolah'] ?></td>
 															<td width='5px'>&nbsp;</td>
 															<td width='25px' style='border:1px solid black'></td>
 														</tr>
@@ -1347,7 +1347,7 @@ $mapel = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM mata_pelajaran"))
 											</thead>
 											<tbody>
 												<?php
-												$beritaQ = mysqli_query($koneksi, "SELECT * FROM berita");
+												$beritaQ = mysqli_query($koneksi, "SELECT * FROM berita order by id_berita desc");
 												?>
 												<?php while ($berita = mysqli_fetch_array($beritaQ)) : ?>
 													<?php
@@ -2811,7 +2811,9 @@ $mapel = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM mata_pelajaran"))
 			timepicker: false,
 			format: 'Y-m-d'
 		});
-		$('.tgl').datetimepicker();
+		$('.tgl').datetimepicker({
+			step:5
+		});
 		$('.timer').datetimepicker({
 			datepicker: false,
 			format: 'H:i'

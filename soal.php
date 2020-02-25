@@ -337,6 +337,8 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
 					$jumsoalesai = $mapel['tampil_esai'];
 					$cekno_soal = $no_soal + 1;
 					?>
+					<input type="hidden" id="nomorsoal" value="<?=$cekno_soal?>" />
+					<input type="hidden" id="jumlahsoal" value="<?=$jumsoalpg?>" />
 					<?php if (($no_soal >= 0) && ($cekno_soal < $jumsoalpg)) { ?>
 
 						<i class='fa fa-spin fa-spinner' id='spin-next' style='display:none;'></i>
@@ -354,7 +356,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
 
 
 						<input type='submit' name='done' id='selesai-submit' style='display:none;' />
-						<button class='done-btn btn btn-danger'><span class='hidden-xs'>TEST </span>SELESAI</button>
+						<button class='done-btn btn btn-danger' disabled><span class='hidden-xs'>TEST </span>SELESAI <span class="aaaaa">[<span class="timer-selesai"></span>]</span></button>
 
 
 
@@ -538,7 +540,7 @@ $image = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'GIF', 
 				<td style="text-align:center">
 
 					<input type='submit' name='done' id='selesai-submit' style='display:none;' />
-					<button class='done-btn btn btn-danger'><i class='fa fa-check'></i><span class='hidden-xs'>TEST </span> SELESAI</button>
+					<button class='done-btn btn btn-danger'><i class='fa fa-check'></i><span class='hidden-xs'>TEST </span> SELESAI [<span class="timer-selesai"></span>]</button>
 
 				</td>
 
