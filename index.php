@@ -1241,7 +1241,7 @@ $tglsekarang = time();
 					if (n_soal == jumsoal) {
 						$(".timer-selesai").html(jam + ':' + (menit-15) + ':' + detik);
 
-						if ((menit == 15) && (detik == 0)) {
+						if (menit < 15) {
 							$(".done-btn").removeAttr("disabled");
 							$(".aaaaa").html('');
 						}

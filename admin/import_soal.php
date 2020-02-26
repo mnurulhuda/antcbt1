@@ -107,7 +107,7 @@ $cekmapel = mysqli_num_rows($mapelQ);
                     </p>
                 </div><!-- /.box-body -->
                 <div class='box-footer'>
-                    <a href='<?=$homeurl?>/admin/pages/word_import/import/sample/sample.docx'><i
+                    <a href='<?=$homeurl?>/admin/word_import/sample/sample.docx'><i
                             class='fa fa-file-word-o'></i> Download Format</a>
                 </div>
             </div><!-- /.box -->
